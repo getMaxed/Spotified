@@ -13,7 +13,7 @@ export default class Feedback_ extends React.Component {
                 <Text>
                     Please let us know what genres are you interested in
                 </Text>
-                <Textarea />
+                <Textarea style={{ marginBottom: '4px' }} />
                 <ButtonLink>Send</ButtonLink>
             </Container>
         );

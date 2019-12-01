@@ -10,6 +10,7 @@ export default class ButtonLink_ extends React.Component {
         hoverColor: PropTypes.string,
         paddingHorizontal: PropTypes.string,
         size: PropTypes.string, // small | normal
+        onClick: PropTypes.func,
         style: PropTypes.object
     };
 
