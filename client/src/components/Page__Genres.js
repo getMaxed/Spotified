@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { getGenresWithArtists } from '../actions/genre';
 
 import AuthCTA from './AuthCTA';
+import FeedbackRequest from './FeedbackRequest';
 
 class GenresPage extends React.Component {
     componentDidMount = async () => {
@@ -15,6 +16,7 @@ class GenresPage extends React.Component {
             <Container>
                 <AuthCTA />
                 <p>Genres Page</p>
+                <FeedbackRequest />
             </Container>
         );
     };

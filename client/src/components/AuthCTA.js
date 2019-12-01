@@ -37,14 +37,13 @@ const Container = styled.div`
     align-items: center;
     margin: 0 auto;
     box-shadow: ${boxShadows.dark};
-    /* background-color: green; */
 `;
 
 const ButtonContainer = styled.div`
     margin: 20px 0 10px;
 `;
 
-const SignUpText = styled.p`
+const SignUpText = styled.div`
     font-weight: bold;
 `;
-const LogInText = styled.p``;
+const LogInText = styled.div``;
