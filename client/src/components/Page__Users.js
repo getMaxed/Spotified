@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default class GenresPage extends React.Component {
+import AuthCTA from './AuthCTA';
+
+export default class UsersPage extends React.Component {
     render = () => {
-        return <p>Users Page</p>;
+        return (
+            <>
+                <AuthCTA />
+                <p>Users Page</p>
+            </>
+        );
     };
 }

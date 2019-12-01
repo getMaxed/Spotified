@@ -12,6 +12,8 @@ import Nav from './components/Nav';
 import GenresPage from './components/Page__Genres';
 import ArtistsPage from './components/Page__Artists';
 import UsersPage from './components/Page__Users';
+import LogInPage from './components/Page__LogIn';
+import SignUpPage from './components/Page__SignUp';
 import GlobalStyle from './GlobalStyle';
 
 export default class App extends React.Component {
@@ -25,6 +27,8 @@ export default class App extends React.Component {
                         <Route path="/genres" component={GenresPage} />
                         <Route path="/artists" component={ArtistsPage} />
                         <Route path="/users" component={UsersPage} />
+                        <Route path="/login" component={LogInPage} />
+                        <Route path="/signup" component={SignUpPage} />
                     </Switch>
                     <GlobalStyle />
                 </Router>

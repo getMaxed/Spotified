@@ -11,5 +11,6 @@ export default createGlobalStyle`
 
     html {
         box-sizing: border-box;
+        font-family: Georgia, 'Times New Roman', Times, serif
     }
 `;
