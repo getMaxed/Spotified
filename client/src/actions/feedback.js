@@ -5,6 +5,7 @@ const postFeedbackURL = 'http://localhost:5000/api/v1/feedback';
 export const postFeedback = fb => async dispatch => {
     try {
         const res = await fetch(postFeedbackURL, {
+            credentials: 'include',
             headers: {
                 'Content-Type': 'Application/JSON'
             },

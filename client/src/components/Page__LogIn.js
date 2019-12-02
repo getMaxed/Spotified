@@ -1,8 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import Auth from './Auth';
 
-export default class LogInPage extends React.Component {
+export default class SignUpPage extends React.Component {
     render = () => {
-        return <p>Log In Page</p>;
+        return (
+            <Container>
+                <Auth type="login" />
+            </Container>
+        );
     };
 }
+
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+`;

@@ -7,7 +7,6 @@ export default class UsersPage extends React.Component {
     render = () => {
         return (
             <>
-                <AuthCTA />
                 <p>Users Page</p>
             </>
         );

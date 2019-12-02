@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const { Model } = require('objection');
+const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const Knex = require('knex');
@@ -11,7 +12,8 @@ dotenv.config();
 Model.knex(Knex(knexConfig));
 
 const app = express()
-    .use(cors())
+    .use(cors({ credentials: true, origin: 'http://localhost:3000' }))
+    .use(cookieParser())
     .use(express.urlencoded({ extended: true }))
     .use(express.json())
     .use(morgan('dev'));

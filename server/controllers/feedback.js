@@ -3,6 +3,7 @@ const asyncErrorHandler = require('../middleware/errorAsync');
 
 exports.postFeedback = asyncErrorHandler(async (req, res, next) => {
     const { type, value } = req.body;
+    console.log(req.cookies);
 
     if (!type || !value) {
         return res.status(400).json({
@@ -13,6 +14,11 @@ exports.postFeedback = asyncErrorHandler(async (req, res, next) => {
 
     const result = await Feedback.query().insert({
         [type]: value
+    });
+
+    res.cookie('rltv_c', Math.random(), {
+        expires: new Date(Date.now() + 9000000),
+        httpOnly: true
     });
 
     if (result.id) {
