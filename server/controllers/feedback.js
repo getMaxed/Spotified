@@ -5,6 +5,8 @@ exports.postFeedback = asyncErrorHandler(async (req, res, next) => {
     const { type, value } = req.body;
     console.log(req.cookies);
 
+    req.session.asdf = '1234';
+
     if (!type || !value) {
         return res.status(400).json({
             success: false,
