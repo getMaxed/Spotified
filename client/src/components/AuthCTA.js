@@ -18,7 +18,7 @@ export default class AuthCTA extends React.Component {
                 </ButtonContainer>
                 <LogInText>
                     Already have an account?{' '}
-                    <Link to="/signup">
+                    <Link to="/login">
                         <ButtonLink paddingHorizontal="4px" size="normal">
                             Log In
                         </ButtonLink>

@@ -1,10 +1,13 @@
 const errorHandler = (err, req, res, next) => {
+    let error = { ...err };
+    error.message = err.message;
+
     console.log(err.stack);
     console.log(err.message);
 
-    res.status(500).json({
+    res.status(error.statusCode || 500).json({
         success: false,
-        error: 'something went wrong'
+        error: (error.statusCode && error.message) || 'Server Error'
     });
 };
 
