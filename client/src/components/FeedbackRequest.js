@@ -6,15 +6,43 @@ import Textarea from './Textarea';
 import { boxShadows } from '../style';
 
 export default class Feedback_ extends React.Component {
+    state = {
+        value: ''
+    };
+
+    onChange = e => {
+        const { value } = e.target;
+        e.target &&
+            this.setState(() => ({
+                value
+            }));
+    };
+
+    onSubmit = () => {
+        const { type, postFeedback } = this.props;
+        const { value } = this.state;
+
+        postFeedback({ type, value });
+        this.setState({
+            value: ''
+        });
+    };
+
     render = () => {
+        const { value } = this.state;
+
         return (
             <Container>
                 <TextBold>We need your feedback!</TextBold>
                 <Text>
                     Please let us know what genres are you interested in
                 </Text>
-                <Textarea style={{ marginBottom: '4px' }} />
-                <ButtonLink>Send</ButtonLink>
+                <Textarea
+                    style={{ marginBottom: '4px' }}
+                    onChange={this.onChange}
+                    value={value}
+                />
+                <ButtonLink onClick={this.onSubmit}>Send</ButtonLink>
             </Container>
         );
     };

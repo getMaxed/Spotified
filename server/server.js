@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const { Model } = require('objection');
+const morgan = require('morgan');
 const cors = require('cors');
 const Knex = require('knex');
 const knexConfig = require('./knexfile');
@@ -12,7 +13,8 @@ Model.knex(Knex(knexConfig));
 const app = express()
     .use(cors())
     .use(express.urlencoded({ extended: true }))
-    .use(express.json());
+    .use(express.json())
+    .use(morgan('dev'));
 
 registerApi(app);
 

@@ -9,7 +9,7 @@ import { boxShadows } from '../style';
 export default class AuthCTA extends React.Component {
     render = () => {
         return (
-            <Container>
+            <Container {...this.props}>
                 <SignUpText>Consider Signing Up for full access!</SignUpText>
                 <ButtonContainer>
                     <Link to="/signup">
